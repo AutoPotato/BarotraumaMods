@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Enhanced Armaments and Animated Barotrauma Patch" modversion="1.2.1" corepackage="False" steamworkshopid="3251262845" gameversion="1.7.7.0">
-  <Item file="%ModDir%/Jobgear/animeArmor.xml" />
+<contentpackage name="Enhanced Armaments and Animated Barotrauma Patch" modversion="1.1.1" corepackage="False" steamworkshopid="3251262845" gameversion="1.4.6.0">
+  <Item file="%ModDir%/Jobgear/Suit.xml" />
+  <Item file="%ModDir%/Jobgear/Vest.xml" />
 </contentpackage>
