@@ -19,21 +19,6 @@ local function removeDuplicates(arr)
     return res
 end
 
-local function safeMax(t)
-    if nil then
-        return "not table"
-    end
-    if type(t)~="table" then
-        return "not table"
-    else
-        local count = 0
-        for _ in pairs(t) do
-            count = count + 1
-        end
-        return count
-    end
-end
-
 local function dump_tb(o)
     if type(o) == 'table' then
         for i, element in pairs(o) do
@@ -43,7 +28,6 @@ local function dump_tb(o)
       return tostring(o)
     end
 end
-
 
 local function getItemID(filePath)
     local EAmodXmlFile = io.open(filePath, "r")
@@ -55,23 +39,23 @@ local function getItemID(filePath)
     io.close(EAmodXmlFile)
     
     --Instantiates the XML parser
-    local listHandler = handler:new()
-    local parser = xml2lua.parser(listHandler)
-    local rawListOutput = {}
-    parser:parse(EAmodXML)
+    local listHandler = handler:new() --create a new handler to store xml data
+    local parser = xml2lua.parser(listHandler) --tell the parser to use listHandler to store the results
+    parser:parse(EAmodXML) --actually parses the data then put it in listHandler
+    local item = listHandler.root.Items.Item
 
-    for i = 1, safeMax(listHandler.root.Items.Item), 1 do
-            -- print(listHandler.root.Items.Item[i].Wearable._attr.name)
-            print(string.format(listHandler.root.Items.Item[i]._attr.identifier))
-            
-            for k = 1, safeMax(listHandler.root.Items.Item[i].Wearable.sprite), 1 do
-                -- print("item"..i .." Wearable.".. "sprite" ..k )
-                if listHandler.root.Items.Item[i].Wearable.sprite[k] == nil then
-                    table.insert(rawListOutput, "          "..listHandler.root.Items.Item[i].Wearable.sprite._attr.texture)
-                else
-                    table.insert(rawListOutput, "          "..listHandler.root.Items.Item[i].Wearable.sprite[k]._attr.texture)
-                end
-            end
+    local rawListOutput = {}
+
+    for item_Index in ipairs(item) do
+        table.insert(rawListOutput, item[item_Index]._attr.identifier)
+
+        for sprite_index in ipairs(item[item_Index].Wearable.sprite) do
+            table.insert(rawListOutput, "    " .. item[item_Index].Wearable.sprite[sprite_index]._attr.texture)
+        end
+
+        if not item[item_Index].Wearable.sprite[1] then
+            table.insert(rawListOutput, "    " .. item[item_Index].Wearable.sprite._attr.texture)
+        end
 
         rawListOutput = removeDuplicates(rawListOutput)
         dump_tb(rawListOutput)
@@ -80,9 +64,9 @@ local function getItemID(filePath)
 end
 
 local function printwithIndex()
-    for total = 1, #Files, 1 do
+    for files_Index in ipairs(Files) do
+        getItemID(Files[files_Index])
         print("")
-        getItemID(Files[total])
     end
 end
 
