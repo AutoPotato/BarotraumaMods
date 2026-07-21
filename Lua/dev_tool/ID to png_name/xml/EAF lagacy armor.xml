@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="scp_livuniform_old" description="" category="Equipment" subcategory="Renegade" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="secarmcab,armcab" />
+    <Deconstruct time="10">
+      <Item identifier="ballisticfiber" amount="4" />
+      <Item identifier="physicorium" amount="3" />
+      <Item identifier="antibleeding2" amount="4" />
+    </Deconstruct>
+    <InventoryIcon name="specopsuniforminv" texture="vanguarduniform.png" sourcerect="595,2,76,61" origin="0.5,0.5" />
+    <Sprite name="specopsuniformground" texture="vanguarduniform.png" sourcerect="571,75,132,74" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Spec Ops Uniform Torso" texture="vanguarduniform.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Spec Ops Uniform Right Hand" texture="vanguarduniform.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Spec Ops Uniform Left Hand" texture="vanguarduniform.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Spec Ops Uniform Right Lower Arm" texture="vanguarduniform.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Spec Ops Uniform Left Lower Arm" texture="vanguarduniform.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Spec Ops Uniform Right Upper Arm" texture="vanguarduniform.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Spec Ops Uniform Left Upper Arm" texture="vanguarduniform.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Spec Ops Uniform Waist" texture="vanguarduniform.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Spec Ops Uniform Right Thigh" texture="vanguarduniform.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Spec Ops Uniform Left Thigh" texture="vanguarduniform.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Spec Ops Uniform Right Leg" texture="vanguarduniform.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Spec Ops Uniform Left Leg" texture="vanguarduniform.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Spec Ops Uniform Left Shoe" texture="vanguarduniform.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Spec Ops Uniform Right Shoe" texture="vanguarduniform.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <damagemodifier afflictionidentifiers="burn" armorsector="0.0,360.0" damagemultiplier="0.75" />
+      <damagemodifier afflictionidentifiers="lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.65" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.4" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds,bleeding" armorsector="0.0,360.0" damagemultiplier="0.6" deflectprojectiles="true" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="-20" />
+      <SkillModifier skillidentifier="electrical" skillvalue="-20" />
+      <StatValue stattype="SwimmingSpeed" value="-0.05" />
+      <StatusEffect type="OnWearing" target="Character">
+        <ReduceAffliction identifier="bleeding" amount="0.3" />
+        <ReduceAffliction identifier="damage" amount="0.25" />
+        <ReduceAffliction identifier="bloodloss" amount="0.15" />
+      </StatusEffect>
+      <StatusEffect tags="livuniform" type="OnWearing" target="Character" duration="1" stackable="false" setvalue="true" />
+    </Wearable>
+  </Item>
+  <Item name="" identifier="scp_livrig_old" category="Equipment" subcategory="Renegade" tags="mediumitem,clothing,vest" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
+    <PreferredContainer primary="secarmcab,armcab" />
+    <Deconstruct time="20">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="physicorium" />
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="vriginv" texture="vanguardrig.png" sourcerect="479,1,61,64" origin="0.5,0.5" />
+    <Sprite name="vrigground" texture="vanguardrig.png" sourcerect="172,32,96,124" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="40" density="40" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="15,-80" handle1="-10,30" holdangle="-5" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictionidentifiers="burn,radiationsickness" armorsector="0.0,360.0" damagemultiplier="0.85" />
+      <damagemodifier afflictionidentifiers="blunttrauma,gunshotwound,bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.05" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <SkillModifier skillidentifier="weapons" skillvalue="10" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="-30" />
+      <SkillModifier skillidentifier="electrical" skillvalue="-30" />
+      <sprite name="Wearable" texture="vanguardrig.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Holster" texture="renegadeplatecarrier.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Armpad" texture="vanguardrig.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+    </Wearable>
+    <ItemContainer capacity="4" slotsperrow="8" keepopenwhenequipped="false" movableframe="true">
+      <Containable items="smallitem" excludeditems="toolbox,mobilecontainer,rucksack,backpack,waistbelt,vest,backpack1,medicalbackpack,power-backpack,duffelbag,heavybackpack,oxy-gen. backpack,xeno-backpack,techno-backpack" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="scp_livhelmet_old" category="Equipment" subcategory="Renegade" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy" scale="0.35">
+    <PreferredContainer primary="secarmcab,armcab" />
+    <Deconstruct time="20">
+      <Item identifier="scp_durasteel" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="physicorium" amount="2" />
+    </Deconstruct>
+    <Sprite name="Vanguard Helmet" texture="helmets.png" sourcerect="425,342,99,101" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon name="vanguardinv" texture="helmets.png" sourcerect="537,392,55,55" origin="0.5,0.5" />
+    <Body radius="30" density="50" />
+    <Wearable slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictionidentifiers="lacerations,gunshotwound,explosiondamage,bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="" deflectprojectiles="true" />
+      <SkillModifier skillidentifier="weapons" skillvalue="15" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="-20" />
+      <SkillModifier skillidentifier="electrical" skillvalue="-20" />
+      <sprite name="Van Helmet Wearable" texture="helmets.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidewearablesoftype="hair,moustache,beard" sourcerect="425,342,99,101" origin="0.55,0.6" />
+      <StatusEffect type="OnWearing" target="Character" setvalue="true" disabledeltatime="true" ObstructVision="true"></StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" disabledeltatime="true" comparison="and" interval="1">
+        <Conditional HasStatusTag="livuniform" />
+        <Affliction identifier="livbuff" amount="10" />
+      </StatusEffect>
+    </Wearable>
+  </Item>
+  <Item name="" identifier="scp_veronrig_old" category="Equipment" subcategory="Coalition" tags="mediumitem,clothing,vest" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
+    <PreferredContainer primary="armcab" />
+    <Deconstruct time="20">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="scp_durasteel" />
+    </Deconstruct>
+    <InventoryIcon name="hriginv" texture="protectrig.png" sourcerect="175,37,97,112" origin="0.5,0.5" />
+    <Sprite name="hrigground" texture="protectrig.png" sourcerect="175,37,97,112" depth="0.6" origin="0.5,0.5" />
+    <Body radius="45" height="40" density="40" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="15,-80" handle1="-10,30" holdangle="-5" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictionidentifiers="burn" armorsector="0.0,360.0" damagemultiplier="0.85" />
+      <damagemodifier afflictionidentifiers="blunttrauma,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.05" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="-35" />
+      <SkillModifier skillidentifier="electrical" skillvalue="-35" />
+      <sprite name="Heavy Rig Wearable" texture="protectrig.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Rig Holster" texture="renegadeplatecarrier.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Rig Right Armpad" texture="protectrig.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Rig Right Lower Arm" texture="protectrig.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Rig Left Lower Arm" texture="protectrig.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Rig Left Kneepad" texture="protectrig.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Rig Right Kneepad" texture="protectrig.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <StatValue stattype="WalkingSpeed" value="-0.075" />
+      <StatValue stattype="SwimmingSpeed" value="-0.05" />
+    </Wearable>
+    <ItemContainer capacity="6" slotsperrow="8" keepopenwhenequipped="false" movableframe="true">
+      <Containable items="smallitem" excludeditems="toolbox,mobilecontainer,rucksack,backpack,waistbelt,vest,backpack1,medicalbackpack,power-backpack,duffelbag,heavybackpack,oxy-gen. backpack,xeno-backpack,techno-backpack" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="scp_veronuniform_old" description="" category="Equipment" subcategory="Coalition" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="secarmcab,armcab" />
+    <Deconstruct time="10">
+      <Item identifier="ballisticfiber" />
+    </Deconstruct>
+    <ItemContainer capacity="2" depth="0.5">
+      <Containable items="smallitem,ammo" excludeditems="clothing,toolbox,mobilecontainer,rucksack,backpack,waistbelt,vest,backpack1,medicalbackpack,power-backpack,duffelbag,heavybackpack,oxy-gen. backpack,xeno-backpack,techno-backpack" />
+    </ItemContainer>
+    <InventoryIcon name="heavyuniforminv" texture="protectuniform.png" sourcerect="462,-3,65,65" origin="0.5,0.5" />
+    <Sprite name="heavyuniformground" texture="protectuniform.png" sourcerect="564,53,117,62" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Heavy Uniform Torso" texture="protectuniform.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Uniform Right Hand" texture="protectuniform.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Uniform Left Hand" texture="protectuniform.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Uniform Right Lower Arm" texture="protectuniform.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Uniform Left Lower Arm" texture="protectuniform.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Uniform Right Upper Arm" texture="protectuniform.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Uniform Left Upper Arm" texture="protectuniform.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Uniform Waist" texture="protectuniform.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Uniform Right Thigh" texture="protectuniform.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Uniform Left Thigh" texture="protectuniform.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Uniform Right Leg" texture="protectuniform.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Uniform Left Leg" texture="protectuniform.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Uniform Left Shoe" texture="protectuniform.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <sprite name="Heavy Uniform Right Shoe" texture="protectuniform.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,683,264" origin="0.5,0.5" />
+      <damagemodifier afflictionidentifiers="burn" armorsector="0.0,360.0" damagemultiplier="0.7" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage,lacerations" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bleeding" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <StatValue stattype="WalkingSpeed" value="-0.03" />
+      <StatValue stattype="SwimmingSpeed" value="-0.03" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="-25" />
+      <SkillModifier skillidentifier="electrical" skillvalue="-25" />
+      <StatusEffect tags="veronuniform" type="OnWearing" target="Character" duration="1" stackable="false" setvalue="true" />
+    </Wearable>
+  </Item>
+  <Item name="" identifier="scp_veronhelmet_old" category="Equipment" subcategory="Coalition" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy" scale="0.4">
+    <PreferredContainer primary="secarmcab,armcab" />
+    <Deconstruct time="20">
+      <Item identifier="ballisticfiber" amount="2" />
+      <Item identifier="titaniumaluminiumalloy" amount="4" />
+      <Item identifier="carbon" amount="2" />
+    </Deconstruct>
+    <Sprite name="Veron Helmet" texture="protecthelmet.png" sourcerect="3,415,106,121" depth="0.6" origin="0.50272936,0.4957793" />
+    <InventoryIcon name="veronrinv" texture="protecthelmet.png" sourcerect="0,548,66,66" origin="0.5,0.5" />
+    <Body radius="30" density="50" />
+    <Wearable slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictionidentifiers="lacerations,gunshotwound,explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.35" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="" deflectprojectiles="true" />
+      <SkillModifier skillidentifier="weapons" skillvalue="25" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="-20" />
+      <SkillModifier skillidentifier="electrical" skillvalue="-20" />
+      <sprite name="Veron Helmet Wearable" texture="protecthelmet.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidewearablesoftype="hair,moustache,beard" sourcerect="2,415,107,121" origin="0.5325714,0.6" />
+      <StatusEffect type="OnWearing" target="Character" setvalue="true" disabledeltatime="true" ObstructVision="true"></StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" conditionalcomparison="and" disabledeltatime="true" interval="1">
+        <Conditional HasStatusTag="veronuniform" />
+        <Affliction identifier="veronbuff" amount="10" />
+      </StatusEffect>
+    </Wearable>
+  </Item>
+</Items>
