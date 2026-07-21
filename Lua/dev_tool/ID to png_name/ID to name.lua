@@ -81,8 +81,8 @@ local function getItemID(filePath)
     local rawListOutput = {}
 
     for i in ipairs(item) do
-        for _2, v2 in pairs(exceptions) do
-            if item[i]._attr.identifier == v2 then
+        for _, v in pairs(exceptions) do
+            if item[i]._attr.identifier == v then
                 -- print('REMOVED '.. item[i]._attr.identifier)
                 table.remove(item, i)
             end
