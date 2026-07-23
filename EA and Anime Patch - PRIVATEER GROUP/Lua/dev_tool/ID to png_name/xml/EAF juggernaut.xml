@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="eaf_juggernautarmor" description="" tags="mediumitem,vest" category="Equipment" subcategory="Coalition" fireproof="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="secarmcab,armcab" />
+    <Deconstruct time="20">
+      <Item identifier="scp_durasteel" amount="4" />
+      <Item identifier="titaniumaluminiumalloy" amount="6" />
+      <Item identifier="physicorium" amount="3" />
+    </Deconstruct>
+    <InventoryIcon name="eaf_juggernautarmorinv" texture="%ModDir%/Juggernaut/eaf_juggernautarmor.png" sourcerect="126,6,178,117" origin="0.5,0.5" />
+    <Sprite name="eaf_juggernautarmor" texture="%ModDir%/Juggernaut/eaf_juggernautarmor.png" sourcerect="87,194,183,101" depth="0.6" origin="0.5,0.5" />
+    <Body width="120" height="70" density="15" friction="0.8" restitution="0.01" />
+    <!-- <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="30,-30" handle1="-10,30" holdangle="-5" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" /> -->
+    <ItemContainer capacity="8" slotsperrow="8" keepopenwhenequipped="false" movableframe="true">
+      <Containable items="smallitem" excludeditems="clothing,toolbox,mobilecontainer,rucksack,backpack,waistbelt,vest,backpack1,medicalbackpack,power-backpack,duffelbag,heavybackpack,oxy-gen. backpack,xeno-backpack,techno-backpack" />
+    </ItemContainer>
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Juggernaut Helmet" texture="%ModDir%/Images/Empty.png" limb="Head" hidelimb="true" hideotherwearables="true" inheritscale="true" ignorelimbscale="true" scale="0.75" inheritlimbdepth="false" depth="0.6" sourcerect="0,0,32,32" origin="0.36,0.76" />
+      <sprite name="Juggernaut chest" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" limb="Torso" hidelimb="true" hideotherwearables="true" inherittexturescale="false" inheritlimbdepth="true" sourcerect="168,3,96,148" origin="0.5,0.78" scale="0.57" />
+      <sprite name="Juggernaut right hand" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" limb="RightHand" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritlimbdepth="true" sourcerect="312,173,31,41" origin="0.27,0.08" />
+      <sprite name="Juggernaut Left Hand" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" limb="LeftHand" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritlimbdepth="true" sourcerect="395,173,31,41" origin="0.27,0.08" />
+      <sprite name="Juggernaut Right Lower Arm" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" limb="RightArm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritlimbdepth="true" sourcerect="293,1,59,80" origin="0.49,0.58" />
+      <sprite name="Juggernaut Left Lower Arm" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" limb="LeftArm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritlimbdepth="true" sourcerect="375,1,59,80" origin="0.49,0.58" />
+      <sprite name="Juggernaut Right Upper Arm" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" limb="RightForearm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritlimbdepth="true" sourcerect="293,83,60,89" origin="0.49,0.43" />
+      <sprite name="Juggernaut Left Upper Arm" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" limb="LeftForearm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritlimbdepth="true" sourcerect="374,83,60,89" origin="0.49,0.43" />
+      <sprite name="Juggernaut Waist" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" limb="Waist" hidelimb="true" hideotherwearables="true" inherittexturescale="false" inheritlimbdepth="true" sourcerect="188,191,73,62" origin="0.48,0.6" scale="0.57" />
+      <sprite name="Juggernaut Right Thigh" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" limb="RightThigh" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritlimbdepth="true" sourcerect="2,12,75,105" origin="0.5,0.5" />
+      <sprite name="Juggernaut Left Thigh" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" limb="LeftThigh" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritlimbdepth="true" sourcerect="82,13,75,105" origin="0.5,0.5" />
+      <sprite name="Juggernaut Right Leg" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" limb="RightLeg" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritlimbdepth="true" sourcerect="3,123,82,132" origin="0.5,0.5" />
+      <sprite name="Juggernaut Left Leg" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" limb="LeftLeg" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritlimbdepth="true" sourcerect="87,122,82,132" origin="0.5,0.5" />
+      <sprite name="Juggernaut Left Shoe" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" sound="footstep_rob_heavy" limb="LeftFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritlimbdepth="true" sourcerect="361,218,76,37" origin="0.5,0.5" />
+      <sprite name="Juggernaut Right Shoe" texture="%ModDir%/Juggernaut/eaf_juggernautarmorworn.png" sound="footstep_rob_heavy" limb="RightFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritlimbdepth="true" sourcerect="282,217,76,37" origin="0.5,0.5" />
+      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.2" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.03" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bleeding" armorsector="0.0,360.0" damagemultiplier="0.05" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.1" damagesound="armourheavyimpact" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="morbusinepoisoning,cyanidepoisoning" damagemultiplier="0.35" damagesound="armourheavyimpact" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.25" probabilitymultiplier="0.25" damagesound="armourheavyimpact" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage" damagemultiplier="0.15" damagesound="armourheavyimpact" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" damagemultiplier="0.2" probabilitymultiplier="0.1" damagesound="armourheavyimpact" />
+      <SkillModifier skillidentifier="medical" skillvalue="-100" />
+      <SkillModifier skillidentifier="helm" skillvalue="-100" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="-50" />
+      <SkillModifier skillidentifier="electrical" skillvalue="-75" />
+      <SkillModifier skillidentifier="weapons" skillvalue="-10" />
+      <StatValue stattype="WalkingSpeed" value="-0.5" />
+      <StatValue stattype="SwimmingSpeed" value="-0.15" />
+      <StatusEffect type="OnWearing" target="Character" setvalue="true" disabledeltatime="true" ObstructVisionAmount="0.8" />
+      <StatusEffect statuseffecttags="juggernautarmor" type="OnWearing" target="Character" duration="1" interval="0.9" />
+      <sound file="%ModDir%/Juggernaut/exogear.ogg" type="OnWearing" range="250.0" volumeproperty="Speed" volume="0.1" loop="true" frequencymultiplier="3" />
+      <StatusEffect type="OnWearing" target="Character">
+        <Conditional isDead="false" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="1" ExpectedSpecies="Human" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" interval="0.9" disabledeltatime="true">
+        <Affliction identifier="recoilstabilized" amount="1" />
+        <Affliction identifier="eaf_juggernaut_buff" amount="2" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" statuseffecttags="cbrnsuit" duration="1" interval="0.9">
+        <Conditional HasStatusTag="sealed" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="This,Character" noninteractable="true" disabledeltatime="true" conditionalcomparison="and" interval="1" duration="20" stackable="false">
+        <Conditional isplayer="true" />
+        <Conditional healthpercentage="lt -50" />
+        <Conditional isdead="false" />
+        <sound file="Content/Items/AlarmBuzzerLoop.ogg" range="500.0" volume="0.5" />
+        <ReduceAffliction identifier="stun" amount="10" />
+        <Affliction identifier="eaf_juggernaut_buff_player_deadrattle" amount="2" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="This,Character" noninteractable="false" conditionalcomparison="and" interval="1" delay="20" disabledeltatime="true" stackable="false">
+        <Conditional isplayer="true" />
+        <Conditional healthpercentage="lt -50" />
+        <Conditional isdead="false" />
+        <Affliction identifier="pressure" strength="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="This,Character" noninteractable="false" conditionalcomparison="and" interval="3">
+        <Conditional isplayer="true" />
+        <Conditional isdead="true" />
+      </StatusEffect>
+    </Wearable>
+  </Item>
+  <Item identifier="eaf_juggernautarmor_2" variantof="eaf_juggernautarmor">
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <Clear />
+      <RequiredItem identifier="eaf_juggernautarmor" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Clear />
+      <Item identifier="eaf_juggernautarmor" />
+    </Deconstruct>
+    <InventoryIcon name="eaf_juggernautarmor_2inv" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2.png" sourcerect="126,6,178,117" origin="0.5,0.5" />
+    <Sprite name="eaf_juggernautarmor_2" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2.png" sourcerect="87,194,183,101" depth="0.6" origin="0.5,0.5" />
+    <Wearable>
+      <sprite name="Juggernaut Helmet" texture="%ModDir%/Images/Empty.png" limb="Head" hidelimb="true" hideotherwearables="true" inheritscale="true" ignorelimbscale="true" scale="0.75" inheritlimbdepth="false" depth="0.6" sourcerect="0,0,32,32" origin="0.36,0.76" />
+      <sprite name="Juggernaut chest" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" limb="Torso" hidelimb="true" hideotherwearables="true" inherittexturescale="false" inheritlimbdepth="true" sourcerect="168,3,96,148" origin="0.5,0.78" scale="0.57" />
+      <sprite name="Juggernaut right hand" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" limb="RightHand" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritlimbdepth="true" sourcerect="312,173,31,41" origin="0.27,0.08" />
+      <sprite name="Juggernaut Left Hand" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" limb="LeftHand" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritlimbdepth="true" sourcerect="395,173,31,41" origin="0.27,0.08" />
+      <sprite name="Juggernaut Right Lower Arm" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" limb="RightArm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritlimbdepth="true" sourcerect="293,1,59,80" origin="0.49,0.58" />
+      <sprite name="Juggernaut Left Lower Arm" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" limb="LeftArm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritlimbdepth="true" sourcerect="375,1,59,80" origin="0.49,0.58" />
+      <sprite name="Juggernaut Right Upper Arm" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" limb="RightForearm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritlimbdepth="true" sourcerect="293,83,60,89" origin="0.49,0.43" />
+      <sprite name="Juggernaut Left Upper Arm" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" limb="LeftForearm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritlimbdepth="true" sourcerect="374,83,60,89" origin="0.49,0.43" />
+      <sprite name="Juggernaut Waist" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" limb="Waist" hidelimb="true" hideotherwearables="true" inherittexturescale="false" inheritlimbdepth="true" sourcerect="188,191,73,62" origin="0.48,0.6" scale="0.57" />
+      <sprite name="Juggernaut Right Thigh" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" limb="RightThigh" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritlimbdepth="true" sourcerect="2,12,75,105" origin="0.5,0.5" />
+      <sprite name="Juggernaut Left Thigh" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" limb="LeftThigh" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritlimbdepth="true" sourcerect="82,13,75,105" origin="0.5,0.5" />
+      <sprite name="Juggernaut Right Leg" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" limb="RightLeg" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritlimbdepth="true" sourcerect="3,123,82,132" origin="0.5,0.5" />
+      <sprite name="Juggernaut Left Leg" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" limb="LeftLeg" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritlimbdepth="true" sourcerect="87,122,82,132" origin="0.5,0.5" />
+      <sprite name="Juggernaut Left Shoe" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" sound="footstep_rob_heavy" limb="LeftFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritlimbdepth="true" sourcerect="361,218,76,37" origin="0.5,0.5" />
+      <sprite name="Juggernaut Right Shoe" texture="%ModDir%/Juggernaut/eaf_juggernautarmor_2worn.png" sound="footstep_rob_heavy" limb="RightFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritlimbdepth="true" sourcerect="282,217,76,37" origin="0.5,0.5" />
+    </Wearable>
+  </Item>
+  <Item name="" identifier="eaf_juggernauthelmet" description="" tags="smallitem,clothing" category="Equipment" subcategory="Coalition" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_heavy" scale="0.35">
+    <PreferredContainer primary="secarmcab,armcab" />
+    <Deconstruct time="20">
+      <Item identifier="scp_durasteel" amount="2" />
+      <Item identifier="titaniumaluminiumalloy" amount="4" />
+      <Item identifier="physicorium" amount="1" />
+    </Deconstruct>
+    <Sprite name="eaf_juggernauthelmet" texture="%ModDir%/Juggernaut/eaf_juggernautarmor.png" sourcerect="4,11,83,90" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon name="eaf_juggernauthelmetinv" texture="%ModDir%/Juggernaut/eaf_juggernautarmor.png" sourcerect="4,11,83,90" origin="0.5,0.5" />
+    <Body radius="30" density="50" />
+    <Wearable slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictionidentifiers="lacerations,gunshotwound,explosiondamage,bleeding" armorsector="0.0,360.0" damagemultiplier="0.03" damagesound="armourheavyimpact" DamageParticle="impactfirearm" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="armourheavyimpact" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.2" />
+      <SkillModifier skillidentifier="weapons" skillvalue="-5" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="-20" />
+      <SkillModifier skillidentifier="electrical" skillvalue="-25" />
+      <sprite name="Juggernaut Helmet" texture="%ModDir%/Juggernaut/eaf_juggernautarmor.png" limb="Head" hidelimb="true" hideotherwearables="true" inheritscale="true" ignorelimbscale="true" scale="0.75" inheritlimbdepth="false" depth="0.6" sourcerect="4,11,83,90" origin="0.36,0.76" />
+      <StatusEffect statuseffecttags="sealed" type="OnWearing" target="Character" duration="1" interval="0.9" />
+      <StatusEffect type="OnWearing" target="Character" setvalue="true" disabledeltatime="true" ObstructVisionAmount="0.8" />
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+      <StatusEffect type="OnWearing" target="Character" interval="0.9" disabledeltatime="true">
+        <Conditional HasStatusTag="juggernautarmor" />
+        <Affliction identifier="eaf_juggernaut_poison_resistance" amount="2" />
+        <Affliction identifier="eaf_juggernaut_burn_resistance" amount="2" />
+      </StatusEffect>
+    </Wearable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <Containable items="oxygensource,weldingtoolfuel" excludeditems="oxygenitetank" />
+      <Containable items="oxygensource">
+        <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1000.0" UseHullOxygen="false" />
+        <StatusEffect type="OnWearing" target="Contained" Condition="-0.3" comparison="And">
+          <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+          <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+          <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+        </StatusEffect>
+      </Containable>
+      <Containable items="oxygenitetank">
+        <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.2" setvalue="true" targetslot="0" comparison="And">
+          <Conditional IsDead="false" />
+          <Conditional DecreasedOxygenConsumption="lt 99" />
+          <Conditional NeedsAir="true" />
+        </StatusEffect>
+      </Containable>
+      <Containable items="weldingfueltank" blameequipperfordeath="true">
+        <StatusEffect type="OnWearing" target="Contained" Condition="-0.5" comparison="And">
+          <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+          <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+          <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" Oxygen="-5.0" comparison="And">
+          <Conditional IsDead="false" />
+          <Conditional DecreasedOxygenConsumption="lt 99" />
+          <Conditional NeedsAir="true" />
+        </StatusEffect>
+      </Containable>
+      <Containable items="incendiumfueltank" blameequipperfordeath="true">
+        <StatusEffect type="OnWearing" target="Contained" Condition="-0.5" comparison="And">
+          <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+          <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+          <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" comparison="And" targetlimb="Torso">
+          <Affliction identifier="burn" amount="20.0" />
+          <Conditional IsDead="false" />
+          <Conditional DecreasedOxygenConsumption="lt 99" />
+          <Conditional NeedsAir="true" />
+        </StatusEffect>
+      </Containable>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="eaf_juggernautuniform" category="Equipment" cargocontaineridentifier="metalcrate" tags="mediumitem,clothing" scale="0.5" description="" impactsoundtag="impact_soft">
+    <PreferredContainer primary="secarmcab,armcab" />
+    <Deconstruct time="30">
+      <Item identifier="scp_durasteel" amount="2" />
+      <Item identifier="titaniumaluminiumalloy" amount="3" />
+      <Item identifier="physicorium" amount="1" />
+    </Deconstruct>
+    <InventoryIcon name="eaf_juggernautuniforminv" texture="%ModDir%/Juggernaut/eaf_juggernautuniforminv.png" sourcerect="0,0,65,65" origin="0.5,0.5" />
+    <Sprite name="eaf_juggernautuniform" texture="%ModDir%/Juggernaut/eaf_juggernautuniform.png" sourcerect="0,0,117,62" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="CAD Armor Helmet" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="true" sourcerect="512,0,128,128" origin="0.5,0.5" />
+      <sprite name="CAD Armor Torso" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="CAD Armor Right Hand" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="CAD Armor Left Hand" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="CAD Armor Right Lower Arm" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="CAD Armor Left Lower Arm" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="CAD Armor Right Upper Arm" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="CAD Armor Left Upper Arm" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="CAD Armor Waist" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="CAD Armor Right Thigh" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="CAD Armor Left Thigh" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="CAD Armor Right Leg" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="CAD Armor Left Leg" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="CAD Armor Left Shoe" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="LeftFoot" sound="suitfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="CAD Armor Right Shoe" texture="%ModDir%/Juggernaut/eaf_juggernautuniformworn.png" limb="RightFoot" sound="suitfootstep" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier afflictionidentifiers="burn" armorsector="0.0,360.0" damagemultiplier="0.7" />
+      <damagemodifier afflictionidentifiers="gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.55" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.4" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bleeding" armorsector="0.0,360.0" damagemultiplier="0.3" probabilitymultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="-30" />
+      <SkillModifier skillidentifier="electrical" skillvalue="-30" />
+      <StatValue stattype="WalkingSpeed" value="-0.1" />
+      <StatValue stattype="SwimmingSpeed" value="-0.08" />
+    </Wearable>
+  </Item>
+</Items>
