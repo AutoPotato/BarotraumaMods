@@ -89,7 +89,7 @@ local function getItemID(filePath)
     local item = listHandler.root.Items.Item
     local rawListOutput = {}
 
-    for i in ipairs(item) do
+    for i = #item, 1, -1 do
         for _, v in ipairs(exceptions) do
             if item[i]._attr.identifier == v then
                 -- print('REMOVED '.. item[i]._attr.identifier)
