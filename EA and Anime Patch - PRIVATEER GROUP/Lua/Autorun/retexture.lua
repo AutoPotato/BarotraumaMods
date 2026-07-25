@@ -71,7 +71,7 @@ local function InjectAnimeEASprites()
                 return
             end
             
-            -- Get <Wearable>'s every element, once found, break.
+            -- Get <Wearable>'s every element, break when found.
             local wearableFind = nil
             for i in config.Elements() do
                 if i.Name.ToString() == "Wearable" then
@@ -83,10 +83,10 @@ local function InjectAnimeEASprites()
             if not wearableFind then
                 print("[Anime EA Mod] Warning: No <Wearable> component found in this item.")
                 return
-            -- Found the wearable, now trying to replace the texture.   
             end
             local count = 0
 
+            -- Replace the texture path inside <Wearable>.   
             for elementsInside in wearableFind.Elements() do
                 if elementsInside.Name.ToString() == "sprite" and not is_exception(elementsInside.GetAttributeString("name", nil)) then
                     -- Direct the texture's path to this mod.

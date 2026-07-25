@@ -59,9 +59,18 @@ local function dump_tb(o)
             io.write(element)
         end
     else
-      return tostring(o)
+        return tostring(o)
     end
     print()
+end
+
+local function deWording(listHere)
+    for index_Deword in ipairs(listHere) do
+        -- print(listHere[index_Deword])
+        -- print(string.gsub(listHere[index_Deword], [[%%ModDir%%/Jobgear/]], ""))
+        -- print(string.gsub(listHere[index_Deword], [[%ModDir%/Jobgear/]], ""))
+        listHere[index_Deword] = string.gsub(listHere[index_Deword], [[%%ModDir%%/%a+/]], "")
+    end
 end
 
 local function getItemID(filePath)
@@ -81,7 +90,7 @@ local function getItemID(filePath)
     local rawListOutput = {}
 
     for i in ipairs(item) do
-        for _, v in pairs(exceptions) do
+        for _, v in ipairs(exceptions) do
             if item[i]._attr.identifier == v then
                 -- print('REMOVED '.. item[i]._attr.identifier)
                 table.remove(item, i)
@@ -90,7 +99,7 @@ local function getItemID(filePath)
     end
 
     for item_Index in ipairs(item) do
-        table.insert(rawListOutput, item[item_Index]._attr.identifier)
+        table.insert(rawListOutput, [["]] .. item[item_Index]._attr.identifier .. [["]])
 
         for sprite_index in ipairs(item[item_Index].Wearable.sprite) do
             table.insert(rawListOutput, ";" .. item[item_Index].Wearable.sprite[sprite_index]._attr.texture)
@@ -101,6 +110,7 @@ local function getItemID(filePath)
         end
         
         rawListOutput = removeDuplicates(rawListOutput)
+        deWording(rawListOutput)
         dump_tb(rawListOutput)
         rawListOutput = {}
 
@@ -114,4 +124,6 @@ local function printwithIndex()
     end
 end
 
+-- to search the output use this regex when ctrl+F: "[a-z0-9_]+",
+print('SEP=;')
 printwithIndex()
