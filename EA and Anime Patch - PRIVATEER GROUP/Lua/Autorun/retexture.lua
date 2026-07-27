@@ -8,18 +8,16 @@ local textureRegistry = {
     ["scp_heavyuniform"]               = "Anime_heavyuniform.png",
     ["scp_heavyrenuniform"]            = "Anime_heavyrenuniform.png",
     ["scp_renegadeplatecarrier"]       = "Anime_renegadeplatecarrier.png",
-    ["scp_heavyhazmatuniform"]         = "Anime_rencbrnsuit.png",
+    ["scp_heavyhazmatuniform"]         = "Anime_heavyhazmat.png",
     ["scp_liquidatorsuit"]             = "Anime_highperfhazmat.png",
     ["scp_combatmedicuniform"]         = "Anime_combatmedic.png",
     ["scp_renegadecombatmedicuniform"] = "Anime_combatmedicrenegade.png",
     ["scp_renegadeuniform"]            = "Anime_renegadeuniform.png",
-    ["scp_renegadedivingsuit"]         = "Anime_renegadesuit.png",
+    -- ["scp_renegadedivingsuit"]         = "Anime_renegadesuit.png",
     ["scp_renegadecaptainuniform"]     = "Anime_renegadecaptain.png",
-    ["sgt_coalitioncaptainuniform"]    = "Anime_coalitioncaptain.png",
     ["scp_combathardsuit"]             = "Anime_combathardsuit.png",
     ["scp_softvest"]                   = "Anime_softvest.png",
     ["scp_riotvest"]                   = "Anime_riotvest.png",
-    ["sgt_securityvest"]               = "Anime_riotsuit.png",
     ["scp_yuirig"]                     = "Anime_specopsvest.png",
     ["scp_specopsuniform"]             = "Anime_specopsuniform.png",
     ["scp_livuniform"]                 = "Anime_vanguarduniform.png",
@@ -31,10 +29,7 @@ local textureRegistry = {
     ["scp_lightuniform"]               = "Anime_lightuniform.png",
     ["scp_cbrnsuit"]                   = "Anime_cbrnsuit.png",
     ["scp_clownbatuniform"]            = "Anime_clowncombatdress.png",
-    ["scp_honkmasteroutfit"]           = "Anime_clowncombatdress2.png",
     ["scp_interceptorsuit"]            = "Anime_interceptsuit.png",
-    ["scp_sevasuit"]                   = "Anime_apsseva.png",
-    ["sgt_banditclothes1"]             = "Anime_bandit_1.png",
 }
 
 local exceptions = {
@@ -44,6 +39,8 @@ local exceptions = {
     "intercepsuit Suit Helmet Wearable",
     "combathardsuithelmet",
     "Renegade Diving Suit Helmet Wearable",
+    "HAZMAT helm Wearable",
+    "CBRN helmet",
 }
 
 local function is_exception(spriteName)
@@ -90,7 +87,7 @@ local function InjectAnimeEASprites()
             for elementsInside in wearableFind.Elements() do
                 if elementsInside.Name.ToString() == "sprite" and not is_exception(elementsInside.GetAttributeString("name", nil)) then
                     -- Direct the texture's path to this mod.
-                    elementsInside.SetAttributeValue("texture", "%ModDir:3251262845%/Jobgear/" ..  spriteFileName)
+                    elementsInside.SetAttributeValue("texture", "%ModDir:3771857485%/Jobgear/" ..  spriteFileName)
                     count = count + 1
                 end
             end

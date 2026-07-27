@@ -70,8 +70,20 @@ local function deWording(listHere)
         -- print(string.gsub(listHere[index_Deword], [[%%ModDir%%/Jobgear/]], ""))
         -- print(string.gsub(listHere[index_Deword], [[%ModDir%/Jobgear/]], ""))
         listHere[index_Deword] = string.gsub(listHere[index_Deword], [[%%ModDir%%/%a+/]], "")
+        listHere[index_Deword] = string.gsub(listHere[index_Deword], [[;helmets.png]], "")
     end
 end
+
+local function removeExceptionsByID(listHere)
+        for i = #listHere, 1, -1 do
+        for _, v in ipairs(exceptions) do
+            if listHere[i]._attr.identifier == v then
+                -- print('REMOVED '.. item[i]._attr.identifier)
+                table.remove(listHere, i)
+            end
+        end
+    end
+end 
 
 local function getItemID(filePath)
     local EAmodXmlFile = io.open(filePath, "r")
@@ -89,20 +101,15 @@ local function getItemID(filePath)
     local item = listHandler.root.Items.Item
     local rawListOutput = {}
 
-    for i = #item, 1, -1 do
-        for _, v in ipairs(exceptions) do
-            if item[i]._attr.identifier == v then
-                -- print('REMOVED '.. item[i]._attr.identifier)
-                table.remove(item, i)
-            end
-        end
-    end
+    removeExceptionsByID(item)
 
     for item_Index in ipairs(item) do
         table.insert(rawListOutput, [["]] .. item[item_Index]._attr.identifier .. [["]])
 
         for sprite_index in ipairs(item[item_Index].Wearable.sprite) do
-            table.insert(rawListOutput, ";" .. item[item_Index].Wearable.sprite[sprite_index]._attr.texture)
+            -- if item[item_Index].Wearable.sprite[sprite_index]._attr.texture == "helmets.png" then
+                table.insert(rawListOutput, ";" .. item[item_Index].Wearable.sprite[sprite_index]._attr.texture)
+            -- end
         end
 
         if not item[item_Index].Wearable.sprite[1] then
