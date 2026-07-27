@@ -30,6 +30,27 @@ local textureRegistry = {
     ["scp_cbrnsuit"]                   = "Anime_cbrnsuit.png",
     ["scp_clownbatuniform"]            = "Anime_clowncombatdress.png",
     ["scp_interceptorsuit"]            = "Anime_interceptsuit.png",
+
+    ["sgt_combatrig"]                  = "Anime_FFE_HeavyGear.png",
+    ["sgt_boarmorhvy"]                 = "Anime_FFE_boarmor1.png",
+    ["sgt_boarmorhaz"]                 = "Anime_FFE_boarmor2.png",
+    ["sgt_boarmorleg"]                 = "Anime_FFE_boarmor3.png",
+    ["sgt_boarmorsap"]                 = "Anime_FFE_boarmor4.png",
+    ["scp_heavymechanicsuit1"]         = "Anime_FFE_engineersuit.png",
+    ["sgt_heavymechanicsuit"]          = "Anime_FFE_engineersuit2.png",
+    ["sgt_lightuniform2"]              = "Anime_FFE_lightuniform2.png",
+    ["sgt_lightuniform"]               = "Anime_FFE_lightuniform.png",
+    ["sgt_renegadeuniform"]            = "Anime_FFE_renegadeuniform.png",
+    ["sgt_combatmedicuniform"]         = "Anime_FFE_combatmedic.png",
+    ["sgt_renegadecombatmedicuniform"] = "Anime_FFE_combatmedicrenegade.png",
+    ["sgt_exogear"]                    = "Anime_FFE_coalexogear.png",
+    -- ["sgt_trenchcoat"]                 = "Anime_FFE_trenchcoat.png",
+    ["sgt_zealotrobes"]                = "Anime_FFE_HuskBenefactor.png",
+
+    ["scp_livuniform_old"]             = "Anime_vanguarduniform.png",
+    -- ["scp_livrig_old"]                 = "",
+    ["scp_veronrig_old"]               = "Anime_protectrig.png",
+    ["scp_veronuniform_old"]           = "Anime_protectuniform.png",
 }
 
 local exceptions = {
@@ -41,6 +62,7 @@ local exceptions = {
     "Renegade Diving Suit Helmet Wearable",
     "HAZMAT helm Wearable",
     "CBRN helmet",
+    "Cultist Head",
 }
 
 local function is_exception(spriteName)
